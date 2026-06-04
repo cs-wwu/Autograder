@@ -1,2 +1,2 @@
 # Autograder
-Autograder for classroom50 
+Autograder templates for classroom50 
