@@ -18,6 +18,21 @@ if TEST_CASES is None:
     print("No autograder.json found")
     sys.exit(1)
 
+# Install pytest and pytest-json-report if not already installed
+subprocess.run(
+    [
+        sys.executable,
+        "-m",
+        "pip",
+        "install",
+        "--quiet",
+        "--user",
+        "pytest",
+        "pytest-json-report",
+    ],
+    check=True,
+)
+
 
 def get_env(s):
     """Get the environment variable, or just return the string s if not in environment"""
