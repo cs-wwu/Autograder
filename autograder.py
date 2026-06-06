@@ -27,6 +27,7 @@ subprocess.run(
         "install",
         "--quiet",
         "--user",
+        "--break-system-packages",
         "pytest",
         "pytest-json-report",
     ],
