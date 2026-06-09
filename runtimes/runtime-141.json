@@ -1,0 +1,5 @@
+{
+  "runs-on": "ubuntu-latest",
+  "python": "3.12",
+  "apt": ["build-essential", "python3-pytest"]
+}
