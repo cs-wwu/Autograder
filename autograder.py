@@ -6,16 +6,18 @@ import subprocess
 import sys
 from pathlib import Path
 
+TEST_FILE = tests.json
+
 # Search for TEST_CASES in a number of different folders
 TEST_CASES = None
 for dirpath, dirnames, filenames in os.walk("."):
-    if "autograder.json" in filenames:
-        filename = os.path.join(dirpath, "autograder.json")
+    if TEST_FILE in filenames:
+        filename = os.path.join(dirpath, TEST_FILE)
         with open(filename) as f:
             TEST_CASES = json.load(f)
             break
 if TEST_CASES is None:
-    print("No autograder.json found")
+    print(f"No {TEST_FILE} found")
     sys.exit(1)
 
 # Install pytest and pytest-json-report if not already installed
@@ -72,7 +74,7 @@ def run_test_case(test_case):
     """Run the test case and return true if passed, or false otherwise"""
     name = test_case["name"]
     setup = test_case["setup"]
-    command = test_case["command"]
+    command = test_case["run"]
     timeout = test_case.get("timeout", 10)
 
     print(f"Running test case: {name}")
