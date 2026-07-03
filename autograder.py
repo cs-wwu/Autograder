@@ -6,7 +6,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-TEST_FILE = tests.json
+TEST_FILE = "tests.json"
 
 # Search for TEST_CASES in a number of different folders
 TEST_CASES = None
