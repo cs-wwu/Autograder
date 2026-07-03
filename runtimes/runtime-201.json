@@ -1,8 +1,6 @@
 {
   "runs-on": "ubuntu-latest",
   "python": "3.12",
-  "node": "20",
   "java": "21",
-  "go": "1.23",
   "apt": ["build-essential", "mit-scheme"]
 }
