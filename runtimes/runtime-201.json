@@ -1,6 +1,0 @@
-{
-  "runs-on": "ubuntu-latest",
-  "python": "3.12",
-  "java": "21",
-  "apt": ["build-essential", "mit-scheme"]
-}
